@@ -11,7 +11,16 @@ echo $tipoUsu;
 if($tipoUsu != ""){
     session_start();
     $_SESSION['usuario']=$tipoUsu;
-    header("Location: ../vista/administrador.php");
+    
+    if($tipoUsu=='A') {
+        header("Location: ../vista/administrador.php");
+    } else if($tipoUsu=="P"){
+        $_SESSION['profesor']=$_POST['usu'];
+        header("Location: ../vista/profesor.php");
+    }else{
+        header("Location: ../vista/alumno.php");
+    }
+
 }else{
     
     echo " El usuario no existe ";

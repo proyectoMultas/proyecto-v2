@@ -1,15 +1,15 @@
 <?php
 require_once('../vista/interface.php');
 plantilla("administrador");
-print "
-<div class=\"row\">
+?>
+<div class="row">
 
-    <div class=\"col-md-2\">
+    <div class="col-md-2">
     </div>
     
-        <div class=\"col-md-10\">
+        <div class="col-md-10">
    
-            <table class=\"table table-hover\">
+            <table class="table table-hover">
         
                 <thead>
     
@@ -25,21 +25,21 @@ print "
     
                     <tr>
     
-                        <td><a href=\"nuevoAlum.php\"> Introducción de Alumnos</a></td>
+                        <td><a href="nuevoAlum.php"> Introducción de Alumnos</a></td>
                     </tr>
                     <tr>
-                        <td><a href=\"matricular.php\"> Matricular alumnos en Módulos</a></td>
+                        <td><a href="matricularAlumno.php"> Matricular alumnos en Módulos</a></td>
                     </tr>
                     <tr>
-                        <td><a href=\"nuevoModulo\"> Introducción de Módulos</a></td>
+                        <td><a href="nuevoModulo.php"> Introducción de Módulos</a></td>
                     </tr>
                     <tr>
-                        <td><a href=\"nuevoProf\"> Introducción de Profesores</a>
+                        <td><a href="nuevoProfesor.php"> Introducción de Profesores</a>
                         </td>
                     </tr>
                     <tr>       
                     
-                        <td><a href=\"asignarProf.html\"> Asignar módulos a profesores</a></td>                    </tr>
+                        <td><a href="asignarProfesor.php"> Asignar módulos a profesores</a></td>                    </tr>
 
                 </tbody>
             </table>
@@ -47,6 +47,7 @@ print "
     </div>
                     
 
-";
+<?php
 
 pie();
+?>

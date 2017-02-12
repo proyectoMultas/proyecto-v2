@@ -40,7 +40,7 @@ print " <form class=\"form-horizontal\" action=\"../controlador/insertAlumno.php
             </div>
             <input type=\"submit\" value=\"Aceptar\" class=\"btn btn-info\">
             <input type=\"reset\" value=\"Borrar\" class=\"btn btn-info\">
-            <a href=\"administrador.php\"> <input type=\"button\" value=\"volver\" class=\"btn btn-info\"></a>
+            <a href=\"../vista/administrador.php\"> <input type=\"button\" value=\"volver\" class=\"btn btn-info\"></a>
         </fieldset>
     </form>
 ";

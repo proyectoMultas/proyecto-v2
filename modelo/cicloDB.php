@@ -67,8 +67,44 @@ class cicloDB{
         return $tipoUsu[0];
     }
 
+    
+    public static function insertarUsuario ($dni,$nombre,$tlf,$pass,$tipo,$imagen) {
+       
+        $insert="INSERT INTO usuarios(DNI, NOMBRE, TELEFONO, PASSWORD, TIPO_USU, nombreImagen) VALUES ('".$dni."','".$nombre."','".$tlf."','".$pass."','".$tipo."','".$imagen."' )";
+        $resultado=self::ejecutaConsulta($insert);
+        return $resultado;
+    }
+
+    public static function InsertModulo($nombre,$codigo,$duraccion) {
+
+        $insert="INSERT INTO modulos(COD_MODULO,NOMBRE,DURACION) VALUES ('".$codigo."','".$nombre."','".$duraccion."' )";
+        $resultado=self::ejecutaConsulta($insert);
+        return $resultado;
+    }
 
 
+    public static function matricularAlumno($dni_alum,$cod_modulo) {
 
+        $insert="INSERT INTO cursa VALUES ('".$dni_alum."','".$cod_modulo."' )";
+        $resultado=self::ejecutaConsulta($insert);
+        return $resultado;
+    }
+    public static function asignarProfesor($dni_prof,$cod_modulo) {
+
+        $insert="INSERT INTO imparte VALUES ('".$dni_prof."','".$cod_modulo."' )";
+        $resultado=self::ejecutaConsulta($insert);
+        return $resultado;
+    }
+
+    public static function cogerAlumnos($nombre){
+        $curso=self::obtieneCurso($nombre);
+        $select="";
+
+    }
+    public static function obtieneCurso($nombre){
+
+        $select="Select from ";
+    }
+    
 }
 ?>
